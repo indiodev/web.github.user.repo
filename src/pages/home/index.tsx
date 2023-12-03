@@ -1,4 +1,4 @@
-import { CircleNotch, MagnifyingGlass } from '@phosphor-icons/react';
+import { MagnifyingGlass } from '@phosphor-icons/react';
 import { useEffect, useRef, useState, type ReactElement } from 'react';
 
 import { CardUser } from '@/components';
@@ -23,11 +23,7 @@ export function Home(): ReactElement {
 	const isFetch = isLoading || isFetching;
 
 	useEffect(() => {
-		if (isSuccess || !inputSearchRef.current?.value) {
-			if (inputSearchRef.current) {
-				inputSearchRef.current.value = '';
-			}
-
+		if (isSuccess) {
 			setSearch('');
 
 			return;
@@ -47,28 +43,18 @@ export function Home(): ReactElement {
 							setSearch(inputSearchRef.current?.value);
 						}}
 					/>
-					{!isFetch && (
-						<S.InputButton
-							onClick={(): void => {
-								if (!inputSearchRef.current) return;
+					<S.InputButton
+						onClick={(): void => {
+							if (!inputSearchRef.current) return;
 
-								setSearch(inputSearchRef.current?.value);
-							}}
-						>
-							<MagnifyingGlass
-								size={24}
-								weight="bold"
-							/>
-						</S.InputButton>
-					)}
-					{isFetch && (
-						<S.InputButton>
-							<CircleNotch
-								size={24}
-								weight="bold"
-							/>
-						</S.InputButton>
-					)}
+							setSearch(inputSearchRef.current?.value);
+						}}
+					>
+						<MagnifyingGlass
+							size={24}
+							weight="bold"
+						/>
+					</S.InputButton>
 				</S.InputRoot>
 				<span>clique na lupa ou pressione enter</span>
 			</S.SearchRoot>

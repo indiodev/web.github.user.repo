@@ -7,16 +7,10 @@ const Container = styled.main`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/* gap: 1rem; */
+	gap: 1rem;
 	max-width: 54rem;
 	width: 100%;
 `;
-
-// const Title = styled.h1`
-// 	font-size: 1.5rem;
-// 	color: ${({ theme }): string => theme.colors['blue']};
-// 	line-height: 1.6;
-// `;
 
 export function Default(): ReactElement {
 	return (

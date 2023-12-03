@@ -1,10 +1,5 @@
 import styled from 'styled-components';
 
-// const spin = keyframes`
-//   0% { transform: rotate(0deg); }
-//   100% { transform: rotate(360deg); }
-// `;
-
 export const Container = styled.section`
 	flex: 1;
 	width: 100%;
@@ -20,7 +15,6 @@ export const SearchRoot = styled.div`
 	flex-direction: column;
 	gap: 0.5rem;
 	align-items: flex-end;
-	padding-bottom: 0.5rem;
 `;
 
 export const InputRoot = styled.div`
@@ -49,7 +43,7 @@ export const InputButton = styled.button`
 	background: transparent;
 	position: absolute;
 	right: 0.5rem;
-	top: 0.5rem;
+	top: 0.65rem;
 	border: none;
 	line-height: 0;
 	color: ${({ theme }): string => theme.colors['base-text']};

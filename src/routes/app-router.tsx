@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { Default } from '@/layout';
 import { Home } from '@/pages';
+import { ProfileAndRepos } from '@/pages/profile-and-repos';
 
 export function AppRouter(): ReactElement {
 	return (
@@ -16,7 +17,10 @@ export function AppRouter(): ReactElement {
 						path="/"
 						element={<Home />}
 					/>
-					<Route path="/profile-and-repos" />
+					<Route
+						path="/profile-and-repos"
+						element={<ProfileAndRepos />}
+					/>
 				</Route>
 			</Routes>
 		</BrowserRouter>

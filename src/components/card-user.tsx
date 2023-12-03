@@ -15,6 +15,10 @@ const Container = styled.div`
 	padding: 1.5rem;
 	gap: 1rem;
 	cursor: pointer;
+
+	&:hover {
+		box-shadow: 0px 2px 28px 0px rgba(0, 0, 0, 0.75);
+	}
 `;
 
 export const Content = styled.div`
