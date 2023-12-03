@@ -12,11 +12,11 @@ const Container = styled.main`
 	width: 100%;
 `;
 
-const Title = styled.h1`
-	font-size: 1.5rem;
-	color: ${({ theme }): string => theme.colors['blue']};
-	line-height: 1.6;
-`;
+// const Title = styled.h1`
+// 	font-size: 1.5rem;
+// 	color: ${({ theme }): string => theme.colors['blue']};
+// 	line-height: 1.6;
+// `;
 
 export function Default(): ReactElement {
 	return (

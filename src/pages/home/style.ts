@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const spin = keyframes`
   0% { transform: rotate(0deg); }
@@ -54,12 +54,4 @@ export const InputButton = styled.button`
 	line-height: 0;
 	color: ${({ theme }): string => theme.colors['base-text']};
 	cursor: pointer;
-
-	/* ${({ animate }) =>
-		animate &&
-		css`
-			svg {
-				animation: ${spin} 2s linear infinite;
-			}
-		`} */
 `;
