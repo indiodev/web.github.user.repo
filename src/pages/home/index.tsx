@@ -59,7 +59,7 @@ export function Home(): ReactElement {
 				<span>clique na lupa ou pressione enter</span>
 			</S.SearchRoot>
 
-			{isFetch && <p>Buscando possível usuário...</p>}
+			{isFetch && <S.FadeText>Buscando possível usuário...</S.FadeText>}
 
 			{!isLoading && !isFetch && isSuccess && user.id && (
 				<CardUser data={user} />

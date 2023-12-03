@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.section`
 	flex: 1;
@@ -48,4 +48,14 @@ export const InputButton = styled.button`
 	line-height: 0;
 	color: ${({ theme }): string => theme.colors['base-text']};
 	cursor: pointer;
+`;
+
+const fade = keyframes`
+	0% { opacity: 0; }
+  100% { opacity: 1;}
+
+`;
+
+export const FadeText = styled.p`
+	animation: ${fade} 3s 450ms linear infinite;
 `;
