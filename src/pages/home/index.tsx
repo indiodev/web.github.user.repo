@@ -5,6 +5,7 @@ import { Container } from '@/components';
 import { useGetUser, useUserHistoric } from '@/hooks';
 
 import { CardUser } from './card-user';
+import { CardUserSkeleton } from './card-user-skeleton';
 import * as S from './style';
 
 export function Home(): ReactElement {
@@ -64,13 +65,23 @@ export function Home(): ReactElement {
 				<span>clique na lupa ou pressione enter</span>
 			</S.SearchRoot>
 
-			{isFetch && <S.FadeText>Buscando possível usuário...</S.FadeText>}
+			{isFetch && (
+				<>
+					<S.ContentHead>
+						<span>Buscando usuário</span>
+					</S.ContentHead>
+					<Container>
+						<CardUserSkeleton />
+					</Container>
+				</>
+			)}
 
 			{!isLoading && !isFetch && isSuccess && user.id && (
 				<>
 					<S.ContentHead>
 						<span>Último resultado</span>
 					</S.ContentHead>
+
 					<Container>
 						<CardUser data={user} />
 					</Container>

@@ -80,10 +80,20 @@ export const ContentHead = styled.div`
 
 export const HistoricAllLink = styled(Link)`
 	text-decoration: none;
+	display: flex;
+	gap: 0.3rem;
 	color: ${({ theme }): string => theme.colors['base-text']};
 `;
 
-export const Dot = styled.span``;
+export const Dot = styled.span`
+	display: block;
+	border-radius: 999px;
+	width: 35px;
+	font-weight: bold;
+	text-align: center;
+	color: ${({ theme }): string => theme.colors['base-background']};
+	background-color: ${({ theme }): string => theme.colors['base-text']};
+`;
 
 export const HistoricList = styled.div`
 	display: flex;

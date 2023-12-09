@@ -25,7 +25,7 @@ export const GlobalStyle = createGlobalStyle`
     width: inherit;
     min-height: inherit;
     display: flex;
-    padding: 6rem 0;
+    padding: 4rem 0;
     justify-content: center;
 
     @media (max-width: 768px) {
