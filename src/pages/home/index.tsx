@@ -2,10 +2,9 @@ import { MagnifyingGlass } from '@phosphor-icons/react';
 import { useEffect, useRef, useState, type ReactElement } from 'react';
 
 import { Container } from '@/components';
+import { CardUser, CardUserSkeleton } from '@/globals';
 import { useGetUser, useUserHistoric } from '@/hooks';
 
-import { CardUser } from './card-user';
-import { CardUserSkeleton } from './card-user-skeleton';
 import * as S from './style';
 
 export function Home(): ReactElement {

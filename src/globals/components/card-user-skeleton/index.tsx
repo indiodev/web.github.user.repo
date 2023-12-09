@@ -1,12 +1,14 @@
 import type { ReactElement } from 'react';
 
+import { Skeleton } from '@/components';
+
 import * as S from './styles';
 
 export function CardUserSkeleton(): ReactElement {
 	return (
 		<S.Container>
 			<S.Content>
-				<S.Skeleton
+				<Skeleton
 					width="6.5rem"
 					height="6.5rem"
 				/>
@@ -18,18 +20,18 @@ export function CardUserSkeleton(): ReactElement {
 							gap: '0.5rem',
 						}}
 					>
-						<S.Skeleton
+						<Skeleton
 							width={'10rem'}
 							height={'1.6rem'}
 						/>
 
 						<div style={{ display: 'flex', gap: '0.5rem' }}>
-							<S.Skeleton
+							<Skeleton
 								width={'18px'}
 								height={'18px'}
 							/>
 
-							<S.Skeleton
+							<Skeleton
 								height={'18px'}
 								width={'8rem'}
 							/>
@@ -37,20 +39,20 @@ export function CardUserSkeleton(): ReactElement {
 					</div>
 
 					<div style={{ display: 'flex', gap: '0.5rem' }}>
-						<S.Skeleton
+						<Skeleton
 							width={'18px'}
 							height={'18px'}
 						/>
 
-						<S.Skeleton
+						<Skeleton
 							height={'18px'}
 							width={'18px'}
 						/>
-						<S.Skeleton
+						<Skeleton
 							height={'18px'}
 							width={'18px'}
 						/>
-						<S.Skeleton
+						<Skeleton
 							height={'18px'}
 							width={'4.5rem'}
 						/>
