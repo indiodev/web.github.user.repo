@@ -87,7 +87,7 @@ export function Home(): ReactElement {
 
 				<Container>
 					<S.HistoricList>
-						{filtered_users.length > 1 &&
+						{filtered_users.length > 0 &&
 							filtered_users.slice(0, 3).map((u) => (
 								<CardUser
 									data={u}
