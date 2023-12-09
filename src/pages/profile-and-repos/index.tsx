@@ -2,7 +2,7 @@ import { type ReactElement } from 'react';
 import type { Location } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
-import { CardRepo, CardUser } from '@/components';
+import { CardRepo } from '@/components';
 import { useGetRepos } from '@/hooks';
 import type { User } from '@/models';
 
@@ -28,7 +28,7 @@ export function ProfileAndRepos(): ReactElement {
 
 	return (
 		<S.Container>
-			<CardUser data={user} />
+			{/* <CardUser data={user} /> */}
 
 			{isSuccess && repos.length > 0 && (
 				<S.RepoRoot>

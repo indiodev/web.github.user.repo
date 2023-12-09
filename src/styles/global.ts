@@ -25,8 +25,12 @@ export const GlobalStyle = createGlobalStyle`
     width: inherit;
     min-height: inherit;
     display: flex;
-    align-items: center;
+    padding: 8rem 0;
     justify-content: center;
+
+    @media (max-width: 768px) {
+      padding: 4rem 2rem;
+    }
   }
 
   html{
@@ -35,4 +39,27 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  body{  
+		scrollbar-color: ${({ theme }): string => theme.colors['base-text']} ${({
+			theme,
+		}): string => theme.colors['base-input']};
+    scrollbar-width: thin;
+
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: ${({ theme }): string => theme.colors['base-text']};
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: ${({ theme }): string => theme.colors['base-input']};
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: ${({ theme }): string => theme.colors['base-input']};
+    }
+  }
 `;

@@ -1,14 +1,16 @@
 import { MagnifyingGlass } from '@phosphor-icons/react';
 import { useEffect, useRef, useState, type ReactElement } from 'react';
 
-import { CardUser } from '@/components';
-import { useGetUser } from '@/hooks';
+import { Container } from '@/components';
+import { useGetUser, useUserHistoric } from '@/hooks';
 
+import { CardUser } from './card-user';
 import * as S from './style';
 
 export function Home(): ReactElement {
 	const inputSearchRef = useRef<HTMLInputElement>(null);
 	const [search, setSearch] = useState('');
+	const { users } = useUserHistoric();
 
 	const {
 		isLoading,
@@ -22,6 +24,8 @@ export function Home(): ReactElement {
 
 	const isFetch = isLoading || isFetching;
 
+	const filtered_users = users.filter((u) => u.id !== user?.id).reverse();
+
 	useEffect(() => {
 		if (isSuccess) {
 			setSearch('');
@@ -32,6 +36,7 @@ export function Home(): ReactElement {
 
 	return (
 		<S.Container>
+			<S.Title>HUBusca</S.Title>
 			<S.SearchRoot>
 				<S.InputRoot>
 					<S.Input
@@ -62,10 +67,36 @@ export function Home(): ReactElement {
 			{isFetch && <S.FadeText>Buscando possível usuário...</S.FadeText>}
 
 			{!isLoading && !isFetch && isSuccess && user.id && (
-				<CardUser data={user} />
+				<Container>
+					<CardUser data={user} />
+				</Container>
 			)}
 
 			{isError && <p>Ops, algo deu errado...</p>}
+
+			<div>
+				<S.HistoricHead>
+					<span>Recentes</span>
+
+					{filtered_users.length > 3 && (
+						<S.HistoricAllLink to="/">
+							Ver todos <S.Dot>{filtered_users.length}</S.Dot>
+						</S.HistoricAllLink>
+					)}
+				</S.HistoricHead>
+
+				<Container>
+					<S.HistoricList>
+						{filtered_users.length > 1 &&
+							filtered_users.slice(0, 3).map((u) => (
+								<CardUser
+									data={u}
+									key={u.id}
+								/>
+							))}
+					</S.HistoricList>
+				</Container>
+			</div>
 		</S.Container>
 	);
 }

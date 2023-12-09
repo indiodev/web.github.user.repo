@@ -6,8 +6,6 @@ const Container = styled.main`
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	gap: 1rem;
 	max-width: 54rem;
 	width: 100%;
 `;

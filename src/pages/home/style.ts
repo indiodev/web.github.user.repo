@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.section`
@@ -7,7 +8,12 @@ export const Container = styled.section`
 	flex-direction: column;
 	height: 100%;
 	min-height: 16rem;
-	gap: 1rem;
+`;
+
+export const Title = styled.h1`
+	font-size: 1.5rem;
+	text-align: center;
+	padding-bottom: 4rem;
 `;
 
 export const SearchRoot = styled.div`
@@ -15,6 +21,10 @@ export const SearchRoot = styled.div`
 	flex-direction: column;
 	gap: 0.5rem;
 	align-items: flex-end;
+
+	@media (max-width: 380px) {
+		align-items: center;
+	}
 `;
 
 export const InputRoot = styled.div`
@@ -58,4 +68,25 @@ const fade = keyframes`
 
 export const FadeText = styled.p`
 	animation: ${fade} 3s 450ms linear infinite;
+`;
+
+export const HistoricRoot = styled.div``;
+
+export const HistoricHead = styled.div`
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 0;
+`;
+
+export const HistoricAllLink = styled(Link)`
+	text-decoration: none;
+	color: ${({ theme }): string => theme.colors['base-text']};
+`;
+
+export const Dot = styled.span``;
+
+export const HistoricList = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 `;
