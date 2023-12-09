@@ -10,9 +10,16 @@ const Container = styled.main`
 	width: 100%;
 `;
 
+export const Title = styled.h1`
+	font-size: 1.5rem;
+	text-align: center;
+	padding-bottom: 2rem;
+`;
+
 export function Default(): ReactElement {
 	return (
 		<Container>
+			<Title>web.github.user.repo</Title>
 			<Outlet />
 		</Container>
 	);

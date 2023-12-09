@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.section`
@@ -8,12 +7,6 @@ export const Container = styled.section`
 	flex-direction: column;
 	height: 100%;
 	min-height: 16rem;
-`;
-
-export const Title = styled.h1`
-	font-size: 1.5rem;
-	text-align: center;
-	padding-bottom: 2rem;
 `;
 
 export const SearchRoot = styled.div`
@@ -76,13 +69,6 @@ export const ContentHead = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 0;
-`;
-
-export const HistoricAllLink = styled(Link)`
-	text-decoration: none;
-	display: flex;
-	gap: 0.3rem;
-	color: ${({ theme }): string => theme.colors['base-text']};
 `;
 
 export const Dot = styled.span`
