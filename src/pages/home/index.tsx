@@ -36,7 +36,7 @@ export function Home(): ReactElement {
 
 	return (
 		<S.Container>
-			<S.Title>HUBusca</S.Title>
+			<S.Title>web.github.user.repo</S.Title>
 			<S.SearchRoot>
 				<S.InputRoot>
 					<S.Input
