@@ -1,8 +1,7 @@
 import { MagnifyingGlass } from '@phosphor-icons/react';
 import { useEffect, useRef, useState, type ReactElement } from 'react';
 
-import { Container } from '@/components';
-import { CardUser, CardUserSkeleton } from '@/globals';
+import { CardUser, CardUserSkeleton, Container } from '@/components';
 import { useGetUser, useUserHistoric } from '@/hooks';
 
 import * as S from './style';
@@ -95,7 +94,7 @@ export function Home(): ReactElement {
 						<span>Recentes</span>
 
 						{filtered_users.length > 3 && (
-							<S.HistoricAllLink to="/">
+							<S.HistoricAllLink to="/historic">
 								Ver todos <S.Dot>{filtered_users.length}</S.Dot>
 							</S.HistoricAllLink>
 						)}

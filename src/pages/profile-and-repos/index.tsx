@@ -2,10 +2,10 @@ import { type ReactElement } from 'react';
 import type { Location } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
-import { CardRepo } from '@/globals';
 import { useGetRepos } from '@/hooks';
 import type { User } from '@/models';
 
+import { CardRepo } from './components';
 import * as S from './styles';
 
 interface UseLocation extends Location {
