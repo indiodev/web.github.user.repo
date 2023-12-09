@@ -46,7 +46,7 @@ export function CardUser({ data }: Props): ReactElement {
 								size={18}
 								weight="fill"
 							/>
-							<span>{data.followers}</span>
+							<span>{data.followers ?? '+1'}</span>
 						</S.IconGroup>
 
 						<S.IconGroup>
@@ -54,7 +54,7 @@ export function CardUser({ data }: Props): ReactElement {
 								size={18}
 								weight="fill"
 							/>
-							<span>{data.location}</span>
+							<span>{data.location ?? 'World'}</span>
 						</S.IconGroup>
 					</S.Info>
 				</S.ProfileInfoGroup>

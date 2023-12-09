@@ -13,7 +13,7 @@ export const Container = styled.section`
 export const Title = styled.h1`
 	font-size: 1.5rem;
 	text-align: center;
-	padding-bottom: 4rem;
+	padding-bottom: 2rem;
 `;
 
 export const SearchRoot = styled.div`
@@ -72,7 +72,7 @@ export const FadeText = styled.p`
 
 export const HistoricRoot = styled.div``;
 
-export const HistoricHead = styled.div`
+export const ContentHead = styled.div`
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 0;

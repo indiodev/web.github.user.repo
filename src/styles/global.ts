@@ -25,11 +25,11 @@ export const GlobalStyle = createGlobalStyle`
     width: inherit;
     min-height: inherit;
     display: flex;
-    padding: 8rem 0;
+    padding: 6rem 0;
     justify-content: center;
 
     @media (max-width: 768px) {
-      padding: 4rem 2rem;
+      padding: 6rem 2rem;
     }
   }
 

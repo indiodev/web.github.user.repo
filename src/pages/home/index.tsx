@@ -67,36 +67,42 @@ export function Home(): ReactElement {
 			{isFetch && <S.FadeText>Buscando possível usuário...</S.FadeText>}
 
 			{!isLoading && !isFetch && isSuccess && user.id && (
-				<Container>
-					<CardUser data={user} />
-				</Container>
+				<>
+					<S.ContentHead>
+						<span>Último resultado</span>
+					</S.ContentHead>
+					<Container>
+						<CardUser data={user} />
+					</Container>
+				</>
 			)}
 
 			{isError && <p>Ops, algo deu errado...</p>}
 
-			<div>
-				<S.HistoricHead>
-					<span>Recentes</span>
+			{filtered_users.length > 0 && (
+				<div>
+					<S.ContentHead>
+						<span>Recentes</span>
 
-					{filtered_users.length > 3 && (
-						<S.HistoricAllLink to="/">
-							Ver todos <S.Dot>{filtered_users.length}</S.Dot>
-						</S.HistoricAllLink>
-					)}
-				</S.HistoricHead>
+						{filtered_users.length > 3 && (
+							<S.HistoricAllLink to="/">
+								Ver todos <S.Dot>{filtered_users.length}</S.Dot>
+							</S.HistoricAllLink>
+						)}
+					</S.ContentHead>
 
-				<Container>
-					<S.HistoricList>
-						{filtered_users.length > 0 &&
-							filtered_users.slice(0, 3).map((u) => (
+					<Container>
+						<S.HistoricList>
+							{filtered_users.slice(0, 3).map((u) => (
 								<CardUser
 									data={u}
 									key={u.id}
 								/>
 							))}
-					</S.HistoricList>
-				</Container>
-			</div>
+						</S.HistoricList>
+					</Container>
+				</div>
+			)}
 		</S.Container>
 	);
 }
