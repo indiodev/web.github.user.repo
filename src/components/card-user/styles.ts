@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	display: flex;
-	/* padding: 1.5rem; */
 	gap: 1rem;
 	cursor: pointer;
+	border-radius: 8px;
+	padding: 1rem;
+	background-color: ${({ theme }): string => theme.colors['base-input']};
 `;
 
 export const Content = styled.div`

@@ -75,7 +75,7 @@ export const HistoricRoot = styled.div``;
 export const ContentHead = styled.div`
 	display: flex;
 	justify-content: space-between;
-	padding: 1rem 0;
+	padding: 0.5rem 0;
 `;
 
 export const HistoricAllLink = styled(Link)`
@@ -98,5 +98,5 @@ export const Dot = styled.span`
 export const HistoricList = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 1.5rem;
+	gap: 0.5rem;
 `;
